@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("Dexcom sensors G6 Machine Learning Classification Algorithm Demo")
+st.title("Dexcom sensors G6 Machine Learning Classification Algorithm Demo1")
 
 trend_name = st.sidebar.selectbox("Select trend", (
 "Flat", "Double up", "Double down", "Single up", "Single down", "Forty_five up", "Forty_five down"))
