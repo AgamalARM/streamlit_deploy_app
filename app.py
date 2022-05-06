@@ -44,7 +44,7 @@ res = requests.get("http://agamalarm101.pythonanywhere.com/")    ###("https://2c
 st.write(res)
 data = res.json()
 st.write(data)
-st.write(data["message"])
+st.write(data["Class"])
 
 
 
