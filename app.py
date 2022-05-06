@@ -42,7 +42,8 @@ import json
 
 res = requests.get("https://2c91-156-194-204-201.eu.ngrok.io/")
 st.write(res)
-st.write(json(res))
+data = res.read()
+st.write(data)
 
 
 
