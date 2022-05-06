@@ -63,8 +63,8 @@ def request_page():
     return json_dump
 
 
-if __name__ == '__main__':
-    app.run()
+# if __name__ == '__main__':
+#     app.run()
 
 
 
