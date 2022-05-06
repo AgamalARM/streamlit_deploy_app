@@ -40,7 +40,7 @@ def get_result(reading, trend):
 import requests
 import json
 
-res = requests.get("https://2c91-156-194-204-201.eu.ngrok.io/")
+res = requests.get("https://share.streamlit.io/agamalarm/api_test/main/api.py")    ###("https://2c91-156-194-204-201.eu.ngrok.io/")
 st.write(res)
 data = res.json()
 st.write(data)
