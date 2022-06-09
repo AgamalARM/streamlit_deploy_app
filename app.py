@@ -42,14 +42,14 @@ def get_result(reading, trend):
 ########################################################################
 
 
-import requests
-import json
+# import requests
+# import json
 
-res = requests.get("http://agamalarm101.pythonanywhere.com/")    ###("https://2c91-156-194-204-201.eu.ngrok.io/")
-st.write(res)
-data = res.json()
-st.write(data)
-st.write(data["Class"])
+# res = requests.get("http://agamalarm101.pythonanywhere.com/")    ###("https://2c91-156-194-204-201.eu.ngrok.io/")
+# st.write(res)
+# data = res.json()
+# st.write(data)
+# st.write(data["Class"])
 
 
 
