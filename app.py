@@ -1,12 +1,24 @@
 import streamlit as st
+import requests
+
+headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
+
+x = requests.get('http://dexcom.invasso.com/api/dexcom/simulation', headers=headers)
+y = x.json()
+
 
 st.title("Dexcom sensors G6 Machine Learning Classification Algorithm Demo2")
 
-trend_name = st.sidebar.selectbox("Select trend", (
-"Flat", "Double up", "Double down", "Single up", "Single down", "Forty_five up", "Forty_five down"))
-reading_value = st.sidebar.number_input('The reading from Dexcom sensor')
+# trend_name = st.sidebar.selectbox("Select trend", (
+# "Flat", "Double up", "Double down", "Single up", "Single down", "Forty_five up", "Forty_five down"))
+# reading_value = st.sidebar.number_input('The reading from Dexcom sensor')
 
-st.write('#### The reading value from Dexcom sensor is ', reading_value)
+trend_name = y['trend']
+reading_value = y['sensor_treading_value']
+student_id = y['student_id']
+
+st.write('#### Student ID : ', student_id)
+st.write('#### The reading value from Dexcom sensor is  ', reading_value)
 st.write('#### The trend is ', trend_name)
 
 st.header('The Classification :')
