@@ -28,27 +28,27 @@ def get_result(reading, trend):
     if ((reading >= 80) and (reading <= 140)):
         st.write('### Class 3')
         st.write('### Normal')
-        st.write('### The system will not send any alerts')
+        
     elif ((reading < 80) and (trend in ["Flat", "Double up", "Single up", "Forty_five up"])):
         st.write('### Class 2')
         st.write('### Low')
         color = st.color_picker('Alert', '#FFFF00')
-        st.write('### the system will send yellow alerts')
+        
     elif ((reading < 80) and (trend in ["Double down", "Single down", "Forty_five down"])):
         st.write('### Class 1')
         st.write('### Critical Low')
         color = st.color_picker('Alert', '#FF0000')
-        st.write('### the system will send red alerts')
+        
     elif ((reading > 140) and (trend in ["Double up", "Single up", "Forty_five up"])):
         st.write('### Class 5')
         st.write('### Critical High')
         color = st.color_picker('Alert', '#FF0000')
-        st.write('### the system will send red alerts')
+        
     elif ((reading > 140) and (trend in ["Flat", "Double down", "Single down", "Forty_five down"])):
         st.write('### Class 4')
         st.write('### High')
         color = st.color_picker('Alert', '#FFFF00')
-        st.write('### the system will send yellow alerts')
+       
         
         
 ########################################################################
